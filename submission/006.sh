@@ -18,7 +18,7 @@ do
 		input_tx=$(echo $decodedcurrtx | jq -r --argjson index2 "$j" '.vin[$index2] | .txid')
 		if [ "$input_tx" == "$cbtx" ] 
 		then
-			echo $input_tx
+			echo $currtx
 			exit 0
 		fi
 	done
